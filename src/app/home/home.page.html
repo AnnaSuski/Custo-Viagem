@@ -1,0 +1,21 @@
+<div class="container-fluid" style="color: white; font-family: 'Grape Nuts', cursive;" >
+  <div class="d-flex flex-column justify-content-center" style="width: 80%;margin-left: 9%;color: white; font-size: 18px;">
+    <br>
+    <h1 class="text-center mb-3" style="color:#FF851B"><u><b>Custo da Viagem</b></u></h1>
+    <br>
+    <label for="Preço" id="letra">Preço da Gasolina: </label>
+    <input style="color: black;" type="number" [(ngModel)]="precoDaGasolina">
+    <br>
+    <label for="distancia" id="letra">Distância da viagem: </label>
+    <input style="color: black;" type="number" [(ngModel)]="distanciaViagem">
+    <br>
+    <label for="consumo" id="letra" >Consumo do carro: </label>
+    <input style="color: black;" type="number" [(ngModel)]="consumoDoCarro">
+    <br><br>
+  </div>
+  <div class="d-flex flex-column justify-content-center" style="width: 50%;margin-left: 24%">
+    <button class="btn btn-warning btn-lg" (click)="calcularCustoDaViagem()">Calcular</button>
+  </div>
+  <br><br>
+  <h4 class="text-center">Total R${{this.total.toLocaleString('pt-br', {minimumFractionDigits: 2})}}</h4>
+</div>
